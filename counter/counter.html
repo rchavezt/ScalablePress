@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+			var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+				// Get todays date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now an the count down date
+				var distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Display the result in the element with id="demo"
+				document.getElementById("days").innerHTML = days;
+				document.getElementById("hours").innerHTML = hours;
+				document.getElementById("minutes").innerHTML = minutes;
+				document.getElementById("seconds").innerHTML = seconds;
+		  	}, 1000);
+		</script>
+	</head>
+	<body>
+		<div class="block">
+			<p id="days" class="number"></p>
+			<p class="segment">Days</p>
+		</div>
+		<div class="block">
+			<p id="hours" class="number"></p>
+			<p class="segment">Hours</p>
+		</div>
+		<div class="block">
+			<p id="minutes" class="number"></p>
+			<p class="segment">Minutes</p>
+		</div>
+		<div class="block">
+			<p id="seconds" class="number"></p>
+			<p class="segment">Seconds</p>
+		</div>
+	</body>
+</html>

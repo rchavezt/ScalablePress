@@ -22,4 +22,4 @@ function randomNumber(n) {
   }
 
   console.log(result);
-			}
+}
